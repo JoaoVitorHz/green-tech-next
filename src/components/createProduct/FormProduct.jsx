@@ -14,12 +14,7 @@ import { useForm } from "react-hook-form"
 import Input from "./Input"
 
 export default function FormProduct(){
-    const {
-        control,
-        formState: { errors },
-        register,
-        handleSubmit,
-    } = useForm()
+    const { control, handleSubmit } = useForm()
 
     const router = useRouter();
     const [nameSupplier, setNameSupplier] = useState()

@@ -9,65 +9,83 @@ export default function FormSupplier(){
 
     const router = useRouter();
 
-    function CreateProduct(data){
-        console.log(data)
-        // router.push('/createProduct')
+    async function CreateSupplier(data){
+        let headersList = {
+            "Accept": "*/*",
+            "Content-Type": "application/json"
+        }
+
+        await fetch('http://127.0.0.1:8000/api/createSupplier', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: headersList
+        })
+        router.push('/listSupplier')
     }
 
     return(
-        <form className="flex flex-col gap-3" onSubmit={handleSubmit(CreateProduct)}>
+        <form className="flex flex-col gap-3" onSubmit={handleSubmit(CreateSupplier)}>
              <Input 
                 control={control}
-                name="Nome"
+                name="name_supplier"
+                inputTitle="Codigo"
                 errorMessage="Insira apenas letras, e letras com acento "
                 rules={ {required: true, pattern: /^[a-zA-ZÀ-ÿ\s'-]+$/g} }
             />
             <Input 
                 control={control}
-                name="Email"
+                name="email_supplier"
+                inputTitle="Email"
                 errorMessage="Email invalido"
                 rules={ {required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/g} }
             />
             <Input 
                 control={control}
-                name="Telefone"
+                name="phone_supplier"
+                inputTitle="Telefone"
                 errorMessage="Insira apenas numeros no telefone"
                 rules={ {required: true, pattern: /^\d+$/g} }
             />
             <Input 
                 control={control}
-                name="CEP"
+                name="cep_supplier"
+                inputTitle="CEP"
                 maxLenght={8}
                 errorMessage="Insira apenas numeros, pontos ou virgulas no preço do produto"
                 rules={ {required: true, pattern: /^\d{5}-?\d{3}$/g} }
             />
             <Input 
                 control={control}
-                name="Estado"
+                name="state_supplier"
+                inputTitle="Estado"
                 errorMessage=""
                 rules={ {required: true} }
             />
             <Input 
                 control={control}
-                name="Cidade"
+                name="city_supplier"
+                inputTitle="Cidade"
                 errorMessage=""
                 rules={ {required: true} }
             />
             <Input 
                 control={control}
-                name="Bairro"
+                name="neighborhood_supplier"
+                inputTitle="Bairro"
                 errorMessage=""
                 rules={ {required: true} }
             />
             <Input 
                 control={control}
-                name="Endereço"
+                name="address_supplier"
+                inputTitle="Endereço"
                 errorMessage=""
                 rules={ {required: true} }
             />
             <Input 
                 control={control}
-                name="Numero"
+                name="number_house_supplier"
+                inputTitle="Numero da casa"
                 errorMessage="Insira apenas numeros"
                 rules={ {required: true, pattern: /\d+/g} }
             />
