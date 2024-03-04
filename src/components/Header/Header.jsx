@@ -5,7 +5,12 @@ export default function Header(){
         <header className="w-screen h-[70px] flex justify-center border-b-[1px] border-white/20 ">
             <div className="w-[1024px] h-full flex justify-between items-center">
                 <div>
-                    <span>GreenTech</span>
+                <Link 
+                    href={"/"} 
+                    className="text-green-600 font-bold text-2xl"
+                >
+                    GreenTech
+                </Link>
                 </div>
                 <nav className="flex gap-5 text-sm text-gray-300">
                     <Link href={"/listProduct"}>Ver Produto</Link>

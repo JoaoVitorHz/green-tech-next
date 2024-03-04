@@ -1,4 +1,4 @@
-import FormProduct from "@/components/updateSupplier/FormProduct";
+import FormProduct from "@/components/updateSupplier/FormUpdate";
 
 export default function CreateProduct( { params } ){
     return(

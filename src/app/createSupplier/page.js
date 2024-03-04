@@ -1,4 +1,4 @@
-import FormProduct from "@/components/createSupplier/FormProduct";
+import FormSupplier from "@/components/createSupplier/FormSupplier";
 
 export default function CreateProduct(){
     return(
@@ -8,7 +8,7 @@ export default function CreateProduct(){
             <span>Adicione Forncedores ao sistema</span>
         </div>
         <div className="w-[500px] border border-white/20 bg-[#1c1917] p-4">
-           <FormProduct />
+           <FormSupplier />
         </div>
     </div>
     )

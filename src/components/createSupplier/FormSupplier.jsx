@@ -1,13 +1,34 @@
 'use client'
 
+import Input from "./Input"
 import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
-import Input from "./Input"
+import { useEffect } from "react";
 
 export default function FormSupplier(){
-    const { control, handleSubmit } = useForm()
-
     const router = useRouter();
+    const { control, handleSubmit, watch, setValue } = useForm()
+    const cepSupplier = watch('cep_supplier');
+
+    useEffect(() => {
+
+        if (cepSupplier !== undefined && cepSupplier.length == 8) 
+            GetAddressSupplier(cepSupplier)    
+
+    }, [cepSupplier])
+
+    async function GetAddressSupplier(cepSupplier){
+        const response = await fetch(`https://viacep.com.br/ws/${cepSupplier}/json/`);
+        const data = await response.json();
+        SetAddressSupplier(data)
+    }
+
+    function SetAddressSupplier(AddressSupplier){
+        setValue('state_supplier', AddressSupplier.uf)
+        setValue('city_supplier', AddressSupplier.localidade)
+        setValue('neighborhood_supplier', AddressSupplier.bairro)
+        setValue('address_supplier', AddressSupplier.logradouro)
+    }
 
     async function CreateSupplier(data){
         let headersList = {
@@ -52,7 +73,7 @@ export default function FormSupplier(){
                 inputTitle="CEP"
                 maxLenght={8}
                 errorMessage="Insira apenas numeros, pontos ou virgulas no preço do produto"
-                rules={ {required: true, pattern: /^\d{5}-?\d{3}$/g} }
+                rules={ {required: true, pattern: /^\d+$/g} }
             />
             <Input 
                 control={control}
