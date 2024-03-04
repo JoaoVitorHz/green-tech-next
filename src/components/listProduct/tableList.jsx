@@ -19,11 +19,14 @@ export default function TableList(){
         <Table>
             <TableHeader>
                 <TableRow>
-                <TableHead>Invoice</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Method</TableHead>
-                <TableHead>Amount</TableHead>
-                <TableHead>Ações</TableHead>
+                <TableHead>ID</TableHead>
+                <TableHead>Codigo</TableHead>
+                <TableHead>Nome do produto</TableHead>
+                <TableHead>Descrição</TableHead>
+                <TableHead>Preço</TableHead>
+                <TableHead>Categoria</TableHead>
+                <TableHead>Quantidade</TableHead>
+                <TableHead>Fornecedor</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>
@@ -35,7 +38,7 @@ export default function TableList(){
                 <TableCell className="flex gap-5">
                     <HiOutlinePencilAlt  
                         className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 
-                        onClick={() => router.push('/updateProduct')}
+                        onClick={() => router.push('/updateProduct/')}
                     />
                     <FaRegTrashCan 
                         className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 

@@ -8,10 +8,10 @@ export default function Header(){
                     <span>GreenTech</span>
                 </div>
                 <nav className="flex gap-5 text-sm text-gray-300">
-                    <Link href={"/listProduct"}>Ver Produtos</Link>
+                    <Link href={"/listProduct"}>Ver Produto</Link>
                     <Link href={"/createProduct"}>Criar Produtos</Link>
                     <Link href={"/listSupplier"}>Ver Fornecedores</Link>
-                    <Link href={"/createSupplier"}>Criar Produtos</Link>
+                    <Link href={"/createSupplier"}>Criar Fornecedor</Link>
                 </nav>
             </div>
         </header>
