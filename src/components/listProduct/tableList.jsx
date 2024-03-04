@@ -1,7 +1,7 @@
-import { IoPersonSharp } from "react-icons/io5";
 import { HiOutlinePencilAlt } from "react-icons/hi";
 import { FaRegTrashCan } from "react-icons/fa6";
-import { FiFileText } from "react-icons/fi";
+
+import { useRouter } from "next/navigation"
 
 import {
     Table,
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/table"
 
 export default function TableList(){
+    const router = useRouter();
     return(
         <Table>
             <TableHeader>
@@ -34,7 +35,7 @@ export default function TableList(){
                 <TableCell className="flex gap-5">
                     <HiOutlinePencilAlt  
                         className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 
-                        onClick={() => props.ShowModalUpdatePatient(patient)}
+                        onClick={() => router.push('/updateProduct')}
                     />
                     <FaRegTrashCan 
                         className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 

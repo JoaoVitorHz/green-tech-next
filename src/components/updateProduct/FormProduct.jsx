@@ -13,12 +13,7 @@ import { useForm } from "react-hook-form"
 import Input from "./Input"
 
 export default function FormProduct(){
-    const {
-        control,
-        formState: { errors },
-        register,
-        handleSubmit,
-    } = useForm()
+    const { control, handleSubmit } = useForm()
 
     const router = useRouter();
 
@@ -31,7 +26,7 @@ export default function FormProduct(){
         <form className="flex flex-col gap-3" onSubmit={handleSubmit(CreateProduct)}>
             <Input 
                 control={control}
-                name="code"
+                name="Codigo"
                 errorMessage="Insira apenas numeros no codigo"
                 rules={ {required: true, pattern: /\d+/g} }
             />
@@ -81,7 +76,7 @@ export default function FormProduct(){
             <button 
                 className="w-full bg-[#22c55e] hover:bg-[#22c55e]/90 text-black py-2 px-3 text-sm"
             >
-                Adicionar produto
+                Editar produto
             </button>
         </form>
     )

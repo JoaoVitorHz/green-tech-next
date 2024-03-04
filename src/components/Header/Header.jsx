@@ -9,7 +9,7 @@ export default function Header(){
                 </div>
                 <nav className="flex gap-5 text-sm text-gray-300">
                     <Link href={"/listProduct"}>Ver Produtos</Link>
-                    <Link href={"/creatProduct"}>Criar Produtos</Link>
+                    <Link href={"/createProduct"}>Criar Produtos</Link>
                     <Link href={"/listSupplier"}>Ver Fornecedores</Link>
                     <Link href={"/createSupplier"}>Criar Produtos</Link>
                 </nav>
