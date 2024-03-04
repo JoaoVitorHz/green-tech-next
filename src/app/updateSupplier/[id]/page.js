@@ -8,7 +8,7 @@ export default function CreateProduct( { params } ){
                 <span>Edite fornecedores cadastrados no sitema</span>
             </div>
             <div className="w-[500px] border border-white/20 bg-[#1c1917] p-4">
-                <FormProduct />
+                <FormProduct idSupplier={params.id}/>
             </div>
         </div>  
     )

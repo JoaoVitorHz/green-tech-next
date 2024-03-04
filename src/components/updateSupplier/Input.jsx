@@ -5,7 +5,7 @@ export default function Input(props){
 
     return(
         <div className="flex flex-col gap-1">
-            <span className={`text-sm ${fieldState.error && 'text-red-600'}`}>{props.name} </span>
+            <span className={`text-sm ${fieldState.error && 'text-red-600'}`}>{props.inputTitle} </span>
             <input   
                 {...field}
                 maxLength={props.maxLenght}

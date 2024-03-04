@@ -47,7 +47,7 @@ export default function TableList(props){
                             <TableCell className="flex gap-5">
                                 <HiOutlinePencilAlt  
                                     className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 
-                                    onClick={() => router.push('/updateProduct/')}
+                                    onClick={() => router.push('/updateProduct/' + product.id)}
                                 />
                                 <FaRegTrashCan 
                                     className="text-xl cursor-pointer hover:text-[#22c55e] transition-[300ms]" 
