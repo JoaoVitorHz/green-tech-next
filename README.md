@@ -1,5 +1,5 @@
 ## Introdução 
-Olá seja bem vindo ao projeto GreenTech, esse é um projeto onde você pode gerenciar Produtos e Fornecedores. 🔥
+Olá seja bem vindo ao projeto GreenTech, sistema de gestão para realizar o cadastro, consulta, exclusão e atualização de produtos e fornecedores! 🔥
 
 Esses repositorio contem apenas o Front-End do projeto, e necessario que você use o Back-End que esta no repositorio abaixo para rodar o projeto.
 
@@ -10,7 +10,6 @@ Esses repositorio contem apenas o Front-End do projeto, e necessario que você u
 - React
 - react-hook-form
 - Shadecn/ui
-- React-icons
 - TailwindCss
   
  ## Para usar o projeto 
