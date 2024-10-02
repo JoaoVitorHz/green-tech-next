@@ -1,31 +1,33 @@
-## Introdução 
-Olá seja bem vindo ao projeto GreenTech, sistema de gestão para realizar o cadastro, consulta, exclusão e atualização de produtos e fornecedores! 🔥
+## Introduction
+Hello, welcome to the GreenTech project, a management system for registering, querying, deleting, and updating products and suppliers! 🔥
 
-Esses repositorio contem apenas o Front-End do projeto, e necessario que você use o Back-End que esta no repositorio abaixo para rodar o projeto.
+This repository contains only the Front-End of the project. It is necessary to use the Back-End found in the repository below to run the project.
 
 `https://github.com/JoaoVitorHz/green-tech-back`
 
-## Tecnologias Usadas 
-- NextJS
+## Technologies Used
+- Next.js
 - React
 - react-hook-form
-- Shadecn/ui
-- TailwindCss
-  
- ## Para usar o projeto 
- - Para você testar o projeto e necessario que você tenha o `node` e o `npm` instalado na sua maquina
- 
- - Depois de instalar os itens acima, agora faça clone do repositorio.
- - Apos de clonar o repostiorio, entre na pasta `green-tech-next` e instale as dependecias do projeto.
+- Shadcn/ui
+- Tailwind CSS
+
+## How to Use the Project
+- To test the project, you need to have `Node` and `NPM` installed on your machine.
+
+- After installing the above items, clone the repository.
+- After cloning the repository, navigate to the `green-tech-next` folder and install the project dependencies.
+
  ```
     npm install
  ```
 
-- Agora rode o projeto
+- Now run the project.
+
 
  ```
     npm run dev
  ```
 
-- Por fim copie a url que apareceu no seu console e cole no navegador
+- Finally, copy the URL that appeared in your console and paste it into your browser.
 
